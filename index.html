@@ -248,10 +248,14 @@
     </footer>
 
     <script type="module">
-      import ChaiTailwind from "./chaiTailwind.js";
-      import config from "./style-config.js";
-      const chai = new ChaiTailwind(config);
-      chai.init();
+      document.addEventListener("DOMContentLoaded", () => {
+          const chaiEngine = new ChaiTailwind(config);
+          chaiEngine.init();
+
+          document.getElementById("app").style.visibility = "visible";
+
+          console.log("ChaiTailwind initialized on DOM ready");
+      })
     </script>
   </body>
 </html>
