@@ -8,7 +8,7 @@ class ChaiTailwind {
   }
 
   apply() {
-    const elems = document.querySelectorAll("*");
+    const elems = document.querySelectorAll("[class]");
     elems.forEach((elem) => {
       if (elem.classList.length > 0) {
         this.applyStyle(elem);
