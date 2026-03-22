@@ -4,11 +4,7 @@ class ChaiTailwind {
   }
 
   init() {
-    if (document.readyState === "loading") {
-      document.addEventListener("DOMContentLoaded", () => this.apply());
-    } else {
-      this.apply();
-    }
+    this.apply();
   }
 
   apply() {
@@ -67,10 +63,7 @@ class ChaiTailwind {
       mappedValue = this.config.fontWeights[value] || value;
     } else if (prop === "rounded") {
       mappedValue = this.config.borderRadius[value] || value;
-    } else if (prop === "shadow") {
-      mappedValue = this.config.shadows[value] || value;
-    }
-
+    } 
     return utility(mappedValue);
   }
 }

@@ -50,16 +50,26 @@ const config = {
       marginLeft: "auto",
       marginRight: "auto",
     }),
-    shadow: (v) => ({ boxShadow: v }),
     link: (color = "white") => ({
       color: color,
       cursor: "pointer",
       textDecoration: "none",
     }),
-    linkHover: (color = "white") => ({
-      transition: "all 0.2s ease",
-      ":hover": { color: color, opacity: "0.8" },
-    }),
+    fixed: () => ({ position: "fixed" }),
+    sticky: () => ({ position: "sticky", top: "0" }),
+    relative: () => ({ position: "relative" }),
+    z: (v) => ({ zIndex: v }),
+
+    w: (v) => ({ width: v }),
+    h: (v) => ({ height: v }),
+    minh: (v) => ({ minHeight: v }),
+    maxw: (v) => ({ maxWidth: v }),
+
+    overflowhidden: () => ({ overflow: "hidden" }),
+    overflowyauto: () => ({ overflowY: "auto" }),
+
+    top: (v) => ({ top: v }),
+    left: (v) => ({ left: v }),
   },
 
   spacing: {
@@ -128,12 +138,6 @@ const config = {
     xl: "0.75rem",
     "2xl": "1rem",
     full: "9999px",
-  },
-
-  shadows: {
-    sm: "0 1px 2px rgba(0,0,0,0.05)",
-    md: "0 4px 6px rgba(0,0,0,0.1)",
-    lg: "0 10px 15px rgba(0,0,0,0.15)",
   },
 };
 

@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ChaiTailwind Documentation</title>
+  </head>
+  <body class="chai-bg-gray-900 chai-text-white">
+    <header
+      class="chai-bg-gray-800 chai-py-6 chai-px-8 chai-flex chai-justifybetween chai-itemscenter chai-fixed"
+      style="top: 0; width: 100%; z-index: 50"
+    >
+      <div
+        class="chai-textsize-2xl chai-fontweight-extrabold chai-text-purple-500"
+      >
+        ☕ ChaiTailwind Docs
+      </div>
+      <a href="index.html" class="chai-link chai-mx-auto chai-textsize-sm"
+        >← Back to Site</a
+      >
+    </header>
+
+    <div class="chai-flex">
+      <aside
+        class="chai-w-64 chai-fixed chai-bg-gray-800 chai-p-8 chai-flexcol chai-gap-4"
+        style="min-height: 100vh; width: 250px"
+      >
+        <nav class="chai-flexcol chai-gap-4">
+          <a href="#setup" class="chai-text-purple-500 chai-fontweight-bold"
+            >Setup</a
+          >
+          <a href="#spacing" class="chai-text-gray-300">Spacing</a>
+          <a href="#colors" class="chai-text-gray-300">Colors</a>
+          <a href="#typography" class="chai-text-gray-300">Typography</a>
+          <a href="#flexbox" class="chai-text-gray-300">Flexbox</a>
+          <a href="#borders" class="chai-text-gray-300">Borders & Radius</a>
+        </nav>
+      </aside>
+
+      <main
+        class="chai-p-12 chai-flexcol chai-gap-12"
+        style="margin-left: 300px; flex: 1"
+      >
+        >
+        <section id="setup">
+          <h2 class="chai-textsize-3xl chai-fontweight-bold chai-mb-4">
+            Installation
+          </h2>
+          <p class="chai-text-gray-400 chai-mb-6">
+            Initialize the engine by passing your config object to the
+            constructor.
+          </p>
+          <pre
+            style="
+              background: #111827;
+              padding: 20px;
+              border-radius: 12px;
+              border: 1px solid #374151;
+              color: #a855f7;
+            "
+          >
+import ChaiTailwind from "./chaiTailwind.js";
+import config from "./style-config.js";
+
+const chai = new ChaiTailwind(config);
+chai.init();</pre
+          >
+        </section>
+
+        <hr class="chai-border-gray-700" style="border: 0.5px solid #374151" />
+
+        <section id="spacing">
+          <h2 class="chai-textsize-3xl chai-fontweight-bold chai-mb-4">
+            Spacing (Padding & Margin)
+          </h2>
+          <p class="chai-text-gray-400 chai-mb-6">
+            Use prefixes like <code class="chai-text-purple-500">p</code>,
+            <code class="chai-text-purple-500">px</code>,
+            <code class="chai-text-purple-500">m</code>, or
+            <code class="chai-text-purple-500">mt</code> followed by the scale
+            value.
+          </p>
+
+          <div class="chai-bg-gray-800 chai-p-6 chai-rounded-xl">
+            <div
+              class="chai-bg-purple-500 chai-p-2 chai-mb-4 chai-textalign-center"
+            >
+              chai-p-2 (8px)
+            </div>
+            <div class="chai-bg-purple-600 chai-p-8 chai-textalign-center">
+              chai-p-8 (32px)
+            </div>
+          </div>
+        </section>
+
+        <section id="colors">
+          <h2 class="chai-textsize-3xl chai-fontweight-bold chai-mb-4">
+            Colors
+          </h2>
+          <p class="chai-text-gray-400 chai-mb-6">
+            Supports shades from 50 to 900. Pattern:
+            <code class="chai-text-purple-500">chai-bg-{color}-{shade}</code>.
+          </p>
+
+          <div class="chai-flex chai-gap-4 chai-flexwrap">
+            <div class="chai-bg-red-500 chai-p-4 chai-rounded-lg">Red 500</div>
+            <div class="chai-bg-blue-500 chai-p-4 chai-rounded-lg">
+              Blue 500
+            </div>
+            <div class="chai-bg-green-500 chai-p-4 chai-rounded-lg">
+              Green 500
+            </div>
+            <div class="chai-bg-purple-500 chai-p-4 chai-rounded-lg">
+              Purple 500
+            </div>
+            <div class="chai-bg-gray-700 chai-p-4 chai-rounded-lg">
+              Gray 700
+            </div>
+          </div>
+        </section>
+
+        <section id="typography">
+          <h2 class="chai-textsize-3xl chai-fontweight-bold chai-mb-4">
+            Typography
+          </h2>
+          <div
+            class="chai-bg-gray-800 chai-p-6 chai-rounded-xl chai-flexcol chai-gap-4"
+          >
+            <h1 class="chai-textsize-5xl chai-fontweight-extrabold">
+              Text 5xl Bold
+            </h1>
+            <h3 class="chai-textsize-2xl chai-fontweight-semibold">
+              Text 2xl Semibold
+            </h3>
+            <p class="chai-textsize-base chai-text-gray-400">
+              Base text with gray-400 color.
+            </p>
+            <p class="chai-textalign-center chai-text-purple-500">
+              Center aligned text
+            </p>
+          </div>
+        </section>
+
+        <section id="flexbox">
+          <h2 class="chai-textsize-3xl chai-fontweight-bold chai-mb-4">
+            Layout & Flexbox
+          </h2>
+          <p class="chai-text-gray-400 chai-mb-6">
+            Quickly build layouts with
+            <code class="chai-text-purple-500">chai-flex</code>.
+          </p>
+
+          <div
+            class="chai-flex chai-justifybetween chai-itemscenter chai-bg-gray-700 chai-p-4 chai-rounded-lg"
+          >
+            <div class="chai-bg-gray-900 chai-p-3">Item 1</div>
+            <div class="chai-bg-gray-900 chai-p-3">Item 2</div>
+            <div class="chai-bg-gray-900 chai-p-3">Item 3</div>
+          </div>
+        </section>
+
+        <section id="borders" class="chai-mb-20">
+          <h2 class="chai-textsize-3xl chai-fontweight-bold chai-mb-4">
+            Borders & Radius
+          </h2>
+          <div class="chai-flex chai-gap-8">
+            <div
+              class="chai-p-10 chai-border-purple-500 chai-rounded-lg"
+              style="border: 2px solid #a855f7"
+            >
+              Rounded LG
+            </div>
+            <div class="chai-p-10 chai-bg-purple-500 chai-rounded-full">
+              Rounded Full
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script type="module">
+      import ChaiTailwind from "./chaiTailwind.js";
+      import config from "./style-config.js";
+      new ChaiTailwind(config).init();
+    </script>
+  </body>
+</html>
