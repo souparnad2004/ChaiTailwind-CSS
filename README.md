@@ -9,8 +9,9 @@
 Built as part of the **Web Dev Cohort 2026** "Build Your Own ChaiTailwind" challenge. This project eliminates the need for traditional CSS files by using a JavaScript-driven styling engine that scans the DOM and applies design tokens dynamically.
 
 ### 🔗 Project Links
-* **Live Demo:** https://chaitailwind-css.netlify.app/   
----
+* **Live Demo:** https://chaitailwind-css.netlify.app/
+* **Twitter Post Link:** https://x.com/SouparD2004/status/2035712902066569287?s=20
+---  
 
 ## 🛠️ How It Works
 
