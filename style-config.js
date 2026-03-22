@@ -1,8 +1,5 @@
-// style-config.js
-
 const config = {
   utilities: {
-    // Spacing
     p: (v) => ({ padding: v }),
     pt: (v) => ({ paddingTop: v }),
     pr: (v) => ({ paddingRight: v }),
@@ -23,87 +20,56 @@ const config = {
     gapx: (v) => ({ columnGap: v }),
     gapy: (v) => ({ rowGap: v }),
 
-    // Colors
     bg: (v) => ({ backgroundColor: v }),
     text: (v) => ({ color: v }),
     bordercolor: (v) => ({ borderColor: v }),
-    bgopacity: (v) => ({ backgroundColor: `rgba(0,0,0,${v})` }),
-    opacity: (v) => ({ opacity: v }),
 
-    // Borders
-    border: (v) => ({ borderWidth: "1px", borderStyle: "solid", borderColor: v }),
-    border2: (v) => ({ borderWidth: "2px", borderStyle: "solid", borderColor: v }),
-    bordert: (v) => ({ borderTop: `1px solid ${v}` }),
-    borderb: (v) => ({ borderBottom: `1px solid ${v}` }),
-    borderl: (v) => ({ borderLeft: `1px solid ${v}` }),
-    borderr: (v) => ({ borderRight: `1px solid ${v}` }),
+    border: (v) => ({
+      borderWidth: "1px",
+      borderStyle: "solid",
+      borderColor: v,
+    }),
     rounded: (v) => ({ borderRadius: v }),
     roundedfull: () => ({ borderRadius: "9999px" }),
 
-    // Typography
     textsize: (v) => ({ fontSize: v }),
     fontweight: (v) => ({ fontWeight: v }),
     textalign: (v) => ({ textAlign: v }),
-    uppercase: () => ({ textTransform: "uppercase" }),
-    lowercase: () => ({ textTransform: "lowercase" }),
-    capitalize: () => ({ textTransform: "capitalize" }),
 
-    // Flex & Layout
     flex: () => ({ display: "flex" }),
     flexcol: () => ({ display: "flex", flexDirection: "column" }),
     block: () => ({ display: "block" }),
     inline: () => ({ display: "inline" }),
     justifycenter: () => ({ justifyContent: "center" }),
-    justifystart: () => ({ justifyContent: "flex-start" }),
-    justifyend: () => ({ justifyContent: "flex-end" }),
     justifybetween: () => ({ justifyContent: "space-between" }),
-    justifyaround: () => ({ justifyContent: "space-around" }),
-    justifyevenly: () => ({ justifyContent: "space-evenly" }),
     itemscenter: () => ({ alignItems: "center" }),
-    itemsstart: () => ({ alignItems: "flex-start" }),
-    itemsend: () => ({ alignItems: "flex-end" }),
     cursorpointer: () => ({ cursor: "pointer" }),
 
-    // Positioning
-    container: (v = "100%") => ({ maxWidth: v, marginLeft: "auto", marginRight: "auto" }),
+    container: (v = "100%") => ({
+      maxWidth: v,
+      marginLeft: "auto",
+      marginRight: "auto",
+    }),
+    link: (color = "white") => ({
+      color: color,
+      cursor: "pointer",
+      textDecoration: "none",
+    }),
     fixed: () => ({ position: "fixed" }),
     sticky: () => ({ position: "sticky", top: "0" }),
     relative: () => ({ position: "relative" }),
-    absolute: () => ({ position: "absolute" }),
     z: (v) => ({ zIndex: v }),
-    top: (v) => ({ top: v }),
-    left: (v) => ({ left: v }),
-    right: (v) => ({ right: v }),
-    bottom: (v) => ({ bottom: v }),
 
-    // Size & Overflow
     w: (v) => ({ width: v }),
     h: (v) => ({ height: v }),
     minh: (v) => ({ minHeight: v }),
     maxw: (v) => ({ maxWidth: v }),
+
     overflowhidden: () => ({ overflow: "hidden" }),
-    overflowxauto: () => ({ overflowX: "auto" }),
     overflowyauto: () => ({ overflowY: "auto" }),
-    overflowscroll: () => ({ overflow: "scroll" }),
 
-    // Shadows
-    shadow: (v = "0 1px 3px rgba(0,0,0,0.1)") => ({ boxShadow: v }),
-    shadowsm: () => ({ boxShadow: "0 1px 2px rgba(0,0,0,0.05)" }),
-    shadowmd: () => ({ boxShadow: "0 4px 6px rgba(0,0,0,0.1)" }),
-    shadowlg: () => ({ boxShadow: "0 10px 15px rgba(0,0,0,0.1)" }),
-    shadowxl: () => ({ boxShadow: "0 20px 25px rgba(0,0,0,0.1)" }),
-
-    // Transforms & Animations
-    rotate: (deg) => ({ transform: `rotate(${deg}deg)` }),
-    scale: (v) => ({ transform: `scale(${v})` }),
-    translatex: (v) => ({ transform: `translateX(${v})` }),
-    translatey: (v) => ({ transform: `translateY(${v})` }),
-    transition: (props = "all 0.3s ease") => ({ transition: props }),
-    hoverbg: (color) => ({ ":hover": { backgroundColor: color } }),
-    hovertext: (color) => ({ ":hover": { color } }),
-
-    // Links
-    link: (color = "white") => ({ color: color, cursor: "pointer", textDecoration: "none" }),
+    top: (v) => ({ top: v }),
+    left: (v) => ({ left: v }),
   },
 
   spacing: {
@@ -134,7 +100,16 @@ const config = {
     purple: { 500: "#a855f7", 600: "#7e22ce" },
     black: { 500: "#000000" },
     white: { 500: "#ffffff" },
-    gray: { 50: "#f9fafb", 100: "#f3f4f6", 300: "#d1d5db", 400: "#9ca3af", 500: "#6b7280", 700: "#374151", 800: "#1f2937", 900: "#111827" },
+    gray: {
+      50: "#f9fafb",
+      100: "#f3f4f6",
+      300: "#d1d5db",
+      400: "#9ca3af",
+      500: "#6b7280",
+      700: "#374151",
+      800: "#1f2937",
+      900: "#111827",
+    },
   },
 
   textSizes: {

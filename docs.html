@@ -184,14 +184,9 @@ chai.init();</pre>
     </div>
 
     <script type="module">
-      document.addEventListener("DOMContentLoaded", () => {
-          const chaiEngine = new ChaiTailwind(config);
-          chaiEngine.init();
-
-          document.getElementById("app").style.visibility = "visible";
-
-          console.log("ChaiTailwind initialized on DOM ready");
-      })
+      import ChaiTailwind from "./chaiTailwind.js";
+      import config from "./style-config.js";
+      new ChaiTailwind(config).init();
     </script>
   </body>
 </html>
